@@ -15,7 +15,8 @@ enum APIError: String, Error {
 }
 
 class PersonController: NSObject {
-    private let baseURL = URL(string: "https://swapi.co/api/people")!
+    // docs: https://lambdaswapi.herokuapp.com/people
+    private let baseURL = URL(string: "https://lambdaswapi.herokuapp.com/api/people")!
     static let shared = PersonController()
     
     // TODO: Add LSIPerson.h to bridging header
