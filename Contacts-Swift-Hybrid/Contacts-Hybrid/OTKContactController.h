@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class Contact;
+@class OTKContact;
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(ContactController)
 @interface OTKContactController : NSObject
 
-@property (nonatomic, readonly) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly) NSArray<OTKContact *> *contacts;
 
 @end
 

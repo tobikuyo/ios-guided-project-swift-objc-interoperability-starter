@@ -12,11 +12,11 @@
 @implementation OTKContactController
 
 @synthesize contacts = _contacts;
-- (NSArray<Contact *> *)contacts {
+- (NSArray<OTKContact *> *)contacts {
     if (!_contacts) {
         _contacts = @[
-            [[Contact alloc] initWithName:@"Tobi" relationship:@"Myself"],
-            [[Contact alloc] initWithName:@"Ricardo" relationship:@"Friend"]
+            [[OTKContact alloc] initWithName:@"Tobi" relationship:@"Myself"],
+            [[OTKContact alloc] initWithName:@"Ricardo" relationship:@"Friend"]
         ];
     }
 

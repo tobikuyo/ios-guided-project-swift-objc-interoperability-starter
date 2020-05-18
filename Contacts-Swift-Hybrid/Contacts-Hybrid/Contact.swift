@@ -8,6 +8,7 @@
 
 import Foundation
 
+@objc(OTKContact)
 class Contact: NSObject {
     @objc var name: String
     @objc var relationship: String?
