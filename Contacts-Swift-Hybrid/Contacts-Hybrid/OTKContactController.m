@@ -7,13 +7,17 @@
 //
 
 #import "OTKContactController.h"
+#import "Contacts_Hybrid-Swift.h"
 
 @implementation OTKContactController
 
 @synthesize contacts = _contacts;
 - (NSArray<Contact *> *)contacts {
     if (!_contacts) {
-        _contacts = [[NSArray alloc] init];
+        _contacts = @[
+            [[Contact alloc] initWithName:@"Tobi" relationship:@"Myself"],
+            [[Contact alloc] initWithName:@"Ricardo" relationship:@"Friend"]
+        ];
     }
 
     return _contacts;
