@@ -15,11 +15,9 @@ class ContactsTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		
+
 	}
-	
-	
+
 	// MARK: UITableViewDataSource methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,11 +27,10 @@ class ContactsTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-        guard let contact = contactController.contacts[indexPath.row] as? Contact else { return cell }
+        let contact = contactController.contacts[indexPath.row]
         cell.textLabel?.text = contact.name
         cell.detailTextLabel?.text = contact.relationship
 
 		return cell
 	}
-
 }
