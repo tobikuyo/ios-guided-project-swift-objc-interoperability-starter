@@ -10,4 +10,22 @@
 
 @implementation OTKContactController
 
+@synthesize contacts = _contacts;
+- (NSArray<Contact *> *)contacts {
+    if (!_contacts) {
+        _contacts = [[NSArray alloc] init];
+    }
+
+    return _contacts;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+
+    }
+
+    return self;
+}
+
 @end
